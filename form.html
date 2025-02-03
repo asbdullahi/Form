@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Application Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            width: 50%;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: left;
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+        }
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .radio-group {
+            display: flex;
+            gap: 15px;
+            margin-top: 5px;
+        }
+        .file-upload {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .button-group {
+            margin-top: 20px;
+            display: flex;
+            gap: 10px;
+        }
+        button {
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .reset-btn {
+            background-color: #f0f0f0;
+        }
+        .apply-btn {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Job Application Form</h2>
+    <p>Thank you for your interest in working with us. Please check below for available job opportunities that meet your criteria and send your application by filling out the Job Application Form.</p>
+    
+    <form>
+        <label for="first-name">Name</label>
+        <input type="text" id="first-name" name="first-name" placeholder="First"><input type="text" id="last-name" name="last-name" placeholder="Last">
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="asab.@example.com">
+
+        <label for="position">What position are you applying for?</label>
+        <select id="position" name="position">
+            <option value="" disabled selected>- Select -</option>
+            <option value="developer">Developer</option>
+            <option value="designer">Designer</option>
+            <option value="manager">Manager</option>
+            <option value="supervisor">Supervisor</option>
+        </select>
+
+        <label for="available-date">Available date</label>
+        <input type="date" id="available-date" name="available-date">
+
+        <label>What is your current employment status?</label>
+        <div class="radio-group">
+            <input type="radio" id="employed" name="employment-status" value="employed">
+            <label for="employed">Employed</label>
+
+            <input type="radio" id="unemployed" name="employment-status" value="unemployed">
+            <label for="unemployed">Unemployed</label>
+
+            <input type="radio" id="self-employed" name="employment-status" value="self-employed">
+            <label for="self-employed">Self-Employed</label>
+
+            <input type="radio" id="student" name="employment-status" value="student">
+            <label for="student">Student</label>
+        </div>
+
+        <label for="resume-link">Please provide your resume link</label>
+        <input type="url" id="resume-link" name="resume-link" placeholder="https://www.asab.com/">
+
+        <label for="resume-upload">Please upload your resume</label>
+        <input type="file" id="resume-upload" name="resume-upload">
+
+        <label for="reference-name">Do you have references? (optional)</label>
+        <input type="text" id="reference-name" name="reference-name" placeholder="First">
+        <input type="text" id="reference-last-name" name="reference-last-name" placeholder="Last">
+
+        <label for="reference-email">Reference email</label>
+        <input type="email" id="reference-email" name="reference-email" placeholder="asab.@example.com">
+
+        <div class="button-group">
+            <button type="reset" class="reset-btn">Reset</button>
+            <button type="submit" class="apply-btn">Apply</button>
+        </div>
+    </form>
+</div>
+
+</body>
+</html>
